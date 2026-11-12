@@ -4,6 +4,7 @@ export type Project = {
   description: string;
   tags: string[];
   preview?: string;
+  previewAlt?: string;
   website?: string;
   repository?: string;
   status?: 'published' | 'in-progress';
@@ -12,38 +13,37 @@ export type Project = {
   fictional?: boolean;
 };
 
-export const projects: Project[] = [
+export type SelectedProject = {
+  repositoryName: string;
+  name: string;
+  description: string;
+  tags: string[];
+  status: 'published' | 'in-progress';
+  website?: string;
+  preview?: string;
+  previewAlt?: string;
+  contribution?: string;
+  featured?: boolean;
+};
+
+export const selectedProjects: SelectedProject[] = [
   {
-    name: 'Ler Mais',
+    repositoryName: 'investigation-game',
+    name: 'Cidade das Brumas',
     description:
-      'Conceito de plataforma para leitores que desejam organizar livros, registrar resenhas e acompanhar metas de leitura em um só lugar.',
-    contribution: 'Proposta: prototipação da interface e desenvolvimento da aplicação.',
-    tags: ['React', 'Next.js', 'TypeScript'],
-    fictional: true,
+      'Jogo investigativo por turnos no navegador, com locais, cartas e um diário de descobertas.',
+    tags: ['TypeScript'],
+    status: 'in-progress',
+    website: 'https://game.arquivoslimiar.workers.dev/',
+    preview: '/cidade-das-brumas.png',
+    previewAlt: 'Mapa da cidade cercada por névoa, arte do jogo Cidade das Brumas',
   },
   {
-    name: 'Caderno Criativo',
-    description:
-      'Conceito de espaço para pessoas criativas reunirem ideias e projetos, com cadernos, tags e favoritos para facilitar a organização.',
-    contribution: 'Proposta: criação da experiência e desenvolvimento da aplicação.',
-    tags: ['React', 'Node.js', 'TypeScript'],
-    fictional: true,
-  },
-  {
-    name: 'Rotina em Foco',
-    description:
-      'Conceito de ferramenta para pessoas organizarem tarefas e acompanharem prioridades em uma rotina de trabalho.',
-    contribution: 'Proposta: prototipação e desenvolvimento da interface e da aplicação.',
-    tags: ['Next.js', 'TypeScript', 'Node.js'],
-    fictional: true,
-  },
-  {
-    name: 'Painel de Ideias',
-    description:
-      'Conceito de painel para equipes reunirem sugestões e acompanharem ideias em diferentes etapas.',
-    contribution: 'Proposta: desenho da experiência e criação de componentes reutilizáveis.',
-    tags: ['React', 'TypeScript', 'UI e UX'],
-    fictional: true,
+    repositoryName: 'kryptomepg-app',
+    name: 'Kryptomepg App',
+    description: 'Aplicação em desenvolvimento. Mais detalhes serão adicionados em breve.',
+    tags: ['TypeScript'],
+    status: 'in-progress',
   },
 ];
 

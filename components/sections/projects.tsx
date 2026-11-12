@@ -1,8 +1,8 @@
-import { projects } from '../../data/portfolio';
+import { getSelectedProjects } from '../../lib/github-projects';
 import { ProjectCard } from '../ui/project-card';
 
-export function Projects() {
-  const visibleProjects = projects.slice(0, 4);
+export async function Projects() {
+  const visibleProjects = await getSelectedProjects();
   const hasExamples = visibleProjects.some((project) => project.fictional);
   return (
     <section id="projetos" className="section container">
@@ -24,7 +24,7 @@ export function Projects() {
           01
         </span>
       </div>
-      <div className="project-grid">
+      <div className={`project-grid${visibleProjects.length === 2 ? ' project-grid--two' : ''}`}>
         {visibleProjects.map((project) => (
           <ProjectCard key={project.name} project={project} />
         ))}

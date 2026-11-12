@@ -7,12 +7,29 @@ export function ProjectCard({ project }: { project: Project }) {
     <article className={`project-card${project.featured ? ' project-card-featured' : ''}`}>
       <div className="project-preview">
         {project.preview ? (
-          <Image
-            src={project.preview}
-            alt={`Prévia do projeto ${project.name}`}
-            width={800}
-            height={500}
-          />
+          project.website ? (
+            <a
+              className="project-preview-link"
+              href={project.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Abrir o site de ${project.name}`}
+            >
+              <Image
+                src={project.preview}
+                alt={project.previewAlt || `Prévia do projeto ${project.name}`}
+                width={800}
+                height={500}
+              />
+            </a>
+          ) : (
+            <Image
+              src={project.preview}
+              alt={project.previewAlt || `Prévia do projeto ${project.name}`}
+              width={800}
+              height={500}
+            />
+          )
         ) : (
           <div className="preview-placeholder">
             <svg aria-hidden="true" viewBox="0 0 128 90" fill="none" className="preview-art">

@@ -59,12 +59,18 @@ components/layout/    cabeçalho e rodapé
 components/sections/  seções da página
 components/ui/        componentes reutilizáveis, como cartões e tags
 data/                 dados de projetos, tecnologias e trajetória
+lib/                  consulta dos projetos selecionados à API do GitHub
 public/               imagem da autora e outros arquivos públicos
 styles/               estilos globais, das seções e responsivos
 .husky/               gancho de pré-commit
 GUIA.md               orientações de atualização e itens pendentes
 ```
 
+## Projetos do GitHub
+
+Escolha até quatro repositórios públicos na lista `selectedProjects` de `data/portfolio.ts`, informando o nome do repositório, um título, uma descrição alternativa, tecnologias e status. Os campos `preview`, `website`, `contribution` e `featured` são opcionais. Para uma imagem, adicione o arquivo em `public/` e use seu caminho em `preview`.
+
+Durante o build, a aplicação consulta a API pública do GitHub para obter descrição, linguagem principal e endereço do site quando disponíveis. Se a consulta falhar, usa os dados locais; não é necessário token. Os dados são atualizados ao gerar e publicar uma nova versão, não a cada visita.
 
 ## Contribuindo
 

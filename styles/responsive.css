@@ -50,7 +50,8 @@
   .section {
     padding-block: 48px;
   }
-  .project-grid {
+  .project-grid,
+  .project-grid--two {
     grid-template-columns: 1fr;
   }
   .project-card {
