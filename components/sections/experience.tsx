@@ -19,12 +19,17 @@ export function Experience() {
         </span>
         <div className="timeline">
           {experience.map((job) => (
-            <article className="timeline-item" key={job.role}>
+            <article className="timeline-item" key={`${job.role}-${job.period}`}>
               <div>
                 <h3>{job.role}</h3>
-                {job.period && <p className="timeline-period">{job.period}</p>}
+                {job.company && <p className="timeline-company">{job.company}</p>}
+                <p className="timeline-period">{job.period}</p>
               </div>
-              <p>{job.text}</p>
+              <ul className="timeline-highlights">
+                {job.highlights.map((highlight) => (
+                  <li key={highlight}>{highlight}</li>
+                ))}
+              </ul>
             </article>
           ))}
         </div>

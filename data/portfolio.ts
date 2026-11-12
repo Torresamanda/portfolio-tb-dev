@@ -47,25 +47,57 @@ export const selectedProjects: SelectedProject[] = [
   },
 ];
 
-export const experience = [
+type Experience = {
+  role: string;
+  company?: string;
+  period: string;
+  highlights: string[];
+};
+
+export const experience: Experience[] = [
   {
     role: 'Technology Specialist',
+    company: 'Monks',
     period: 'mar. 2026 — atual',
-    text: 'Referência técnica em front-end: desenvolve aplicações com Next.js, define padrões e componentes reutilizáveis, revisa código e apoia a equipe com mentoria.',
+    highlights: [
+      'Definição de padrões de front-end, arquitetura e componentes reutilizáveis para aplicações em Next.js.',
+      'Mentoria, revisões de código e apoio à documentação técnica e às decisões de projeto.',
+    ],
   },
   {
     role: 'Technology Analyst II',
+    company: 'Monks',
     period: 'jan. 2025 — mar. 2026',
-    text: 'Desenvolvimento de plataformas internas com Next.js, da prototipação no Figma à entrega, com participação em arquitetura, revisão de código e deploys na Google Cloud.',
+    highlights: [
+      'Desenvolvimento de plataformas internas com Next.js, da prototipação no Figma à entrega.',
+      'Participação em revisões de código e gerenciamento de repositórios, pipelines e deploys na Google Cloud.',
+    ],
   },
   {
     role: 'Technology Analyst',
+    company: 'Monks',
     period: 'fev. 2024 — jan. 2025',
-    text: 'Desenvolvimento e manutenção de aplicações com React, Next.js e Node.js, além de extratores de dados para plataformas de anúncios e analytics.',
+    highlights: [
+      'Desenvolvimento e sustentação do portal interno e de sistemas com React, Next.js e Node.js.',
+      'Criação de extratores para plataformas como Amazon Ads, Google Analytics, Search Console e TikTok.',
+    ],
   },
   {
     role: 'Internal Projects Strategist',
-    period: undefined,
-    text: 'Desenvolvimento de aplicações internas com React e extratores com Node.js para Amazon Ads e Search Console, usando serviços da Google Cloud.',
+    company: 'Media.Monks Brasil · Estágio',
+    period: 'jan. 2023 — dez. 2023',
+    highlights: [
+      'Desenvolvimento e manutenção de site interno com React e de extratores de dados com Node.js.',
+      'Uso de GitHub, integração contínua e serviços da Google Cloud no fluxo dos projetos.',
+    ],
+  },
+  {
+    role: 'Internal Projects Strategist',
+    company: 'Rocky.Monks · Estágio',
+    period: 'abr. 2022 — abr. 2023',
+    highlights: [
+      'Desenvolvimento de interfaces internas em React e de extratores para Amazon Ads e Search Console.',
+      'Organização das demandas no Jira e contato com Firebase, Firestore, BigQuery e Cloud Functions.',
+    ],
   },
 ];

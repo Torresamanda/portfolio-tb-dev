@@ -32,23 +32,13 @@ export function ProjectCard({ project }: { project: Project }) {
           )
         ) : (
           <div className="preview-placeholder">
-            <svg aria-hidden="true" viewBox="0 0 128 90" fill="none" className="preview-art">
-              <path d="M17 17h94v60H17z" rx="6" stroke="currentColor" strokeWidth="2" />
-              <path
-                d="M17 29h94M25 23h2m5 0h2m5 0h2"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-              <path
-                d="M43 45l-8 7 8 7m42-14 8 7-8 7M70 41l-10 23"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            <span>Prévia em breve</span>
+            <div className="preview-paper" aria-hidden="true">
+              <span className="preview-paper-label">arquivo de projetos</span>
+              <span className="preview-paper-title">{project.name}</span>
+              <span className="preview-paper-line" />
+              <span className="preview-paper-mark">✦</span>
+            </div>
+            <span className="preview-caption">Prévia em breve</span>
           </div>
         )}
       </div>
