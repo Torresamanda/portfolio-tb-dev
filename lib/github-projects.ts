@@ -12,7 +12,9 @@ function safeWebsite(value: unknown): string | undefined {
   }
 }
 
-async function getProject(selected: SelectedProject): Promise<Project> {
+type ProjectResult = { project: Project; usedFallback: boolean };
+
+async function getProject(selected: SelectedProject): Promise<ProjectResult> {
   const { repositoryName, ...details } = selected;
   const fallback: Project = {
     ...details,
@@ -33,21 +35,30 @@ async function getProject(selected: SelectedProject): Promise<Project> {
     const description = typeof repo.description === 'string' ? repo.description.trim() : '';
     const language = typeof repo.language === 'string' ? repo.language.trim() : '';
     return {
-      ...fallback,
-      description: description || fallback.description,
-      tags: language ? Array.from(new Set([...fallback.tags, language])) : fallback.tags,
-      website: safeWebsite(repo.homepage) || fallback.website,
+      project: {
+        ...fallback,
+        description: description || fallback.description,
+        tags: language ? Array.from(new Set([...fallback.tags, language])) : fallback.tags,
+        website: safeWebsite(repo.homepage) || fallback.website,
+      },
+      usedFallback: false,
     };
   } catch (error) {
     console.warn(
       `Não foi possível atualizar ${repositoryName} pelo GitHub; usando dados locais.`,
       error,
     );
-    return fallback;
+    return { project: fallback, usedFallback: true };
   }
 }
 
-/** Consultado na geração estática; a publicação precisa ser refeita para atualizar os dados. */
-export async function getSelectedProjects(): Promise<Project[]> {
-  return Promise.all(selectedProjects.slice(0, 4).map(getProject));
+export async function getSelectedProjects(): Promise<{
+  projects: Project[];
+  usedFallback: boolean;
+}> {
+  const results = await Promise.all(selectedProjects.slice(0, 4).map(getProject));
+  return {
+    projects: results.map(({ project }) => project),
+    usedFallback: results.some((result) => result.usedFallback),
+  };
 }
