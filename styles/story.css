@@ -1,0 +1,238 @@
+/* A quiet, book-inspired layout for the personal chapters. */
+.chapter-kicker {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.chapter-heading {
+  position: relative;
+  padding: 24px 72px 24px 24px;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 16px 16px 0;
+  background: var(--about);
+}
+.chapter-heading h2 {
+  margin-top: 8px;
+}
+.chapter-tab {
+  position: absolute;
+  top: 0;
+  right: 32px;
+  display: grid;
+  place-items: start center;
+  width: 32px;
+  height: 64px;
+  padding-top: 8px;
+  color: var(--button-text);
+  background: var(--accent);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
+  font-size: 12px;
+  font-weight: 700;
+}
+.project-card {
+  position: relative;
+  box-shadow: 0 8px 24px rgb(35 19 40 / 0.05);
+}
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 32px;
+  width: 48px;
+  height: 4px;
+  background: var(--accent);
+  opacity: 0.55;
+  border-radius: 0 0 4px 4px;
+}
+.timeline-paper {
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 12px 32px rgb(35 19 40 / 0.06);
+}
+.timeline-paper-label {
+  display: block;
+  margin-bottom: 24px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.about {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 16px 48px rgb(35 19 40 / 0.08);
+}
+.about-opening,
+.about-story {
+  position: relative;
+  padding: 48px;
+}
+.about-opening {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--about);
+  border-right: 1px solid var(--border);
+}
+.about .about-lead {
+  max-width: 300px;
+  margin-top: 24px;
+  color: var(--text);
+  font-family: Georgia, serif;
+  font-size: clamp(22px, 2.3vw, 30px);
+  font-style: italic;
+  line-height: 1.35;
+}
+.about-note {
+  max-width: 320px;
+  margin-top: 48px;
+  padding: 16px 24px;
+  border-left: 2px solid var(--accent);
+  background: var(--surface);
+  transform: rotate(-1deg);
+}
+.about-note-label {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.about-note p {
+  margin-top: 8px;
+  font-size: 14px;
+}
+.about-page-number {
+  display: block;
+  margin-top: 32px;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+.about-story .about-page-number {
+  text-align: right;
+}
+.about-bookmark {
+  position: absolute;
+  top: 0;
+  right: 32px;
+  display: grid;
+  place-items: start center;
+  width: 32px;
+  height: 64px;
+  padding-top: 8px;
+  background: var(--accent);
+  color: var(--button-text);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
+}
+.about-story > p {
+  padding-right: 24px;
+}
+.about-principles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+.about-principles strong,
+.about-principles span {
+  display: block;
+}
+.about-principles strong {
+  font-family: Georgia, serif;
+  font-size: 16px;
+}
+.about-principles span {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.contact-card {
+  position: relative;
+  width: 100%;
+  padding: 64px 32px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--about);
+  overflow: hidden;
+}
+.contact-card h2 {
+  margin-top: 16px;
+}
+.contact-card > p {
+  margin-top: 16px;
+  color: var(--muted);
+}
+.contact-card .contact-note {
+  color: var(--accent);
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+}
+.contact-stamp {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  color: var(--accent);
+  opacity: 0.6;
+  font-size: 32px;
+  line-height: 1;
+}
+@media (max-width: 700px) {
+  .chapter-heading {
+    padding: 24px 56px 24px 16px;
+  }
+  .chapter-tab {
+    right: 16px;
+  }
+  .timeline-paper {
+    padding: 24px 16px;
+  }
+  .about {
+    grid-template-columns: 1fr;
+  }
+  .about-opening,
+  .about-story {
+    padding: 32px 24px;
+  }
+  .about-story {
+    padding-top: 72px;
+  }
+  .about-opening {
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .about-note {
+    margin-top: 24px;
+  }
+  .about-principles {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .about-principles span {
+    margin-top: 4px;
+  }
+  .contact-card {
+    padding: 64px 24px 48px;
+  }
+  .contact-stamp {
+    top: 16px;
+    right: 24px;
+  }
+}

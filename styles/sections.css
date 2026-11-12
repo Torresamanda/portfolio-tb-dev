@@ -1,0 +1,43 @@
+/* Each page grows beyond the viewport when its content needs more room. */
+main {
+  overflow-x: clip;
+}
+
+.hero,
+.section {
+  position: relative;
+  min-height: calc(100svh - 88px);
+  padding-block: 64px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* A fine, irregular paper edge separates chapters without hiding content. */
+main > section:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100vw;
+  height: 24px;
+  transform: translateX(-50%);
+  background: var(--accent);
+  opacity: 0.3;
+  pointer-events: none;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='24' viewBox='0 0 240 24'%3E%3Cpath d='M0 13 L12 12 L20 14 L31 11 L41 13 L53 10 L64 12 L75 10 L87 13 L99 11 L111 13 L123 10 L134 12 L146 9 L158 12 L170 10 L182 13 L194 11 L205 13 L216 10 L228 12 L240 13' fill='none' stroke='black' stroke-width='1.2'/%3E%3C/svg%3E")
+    repeat-x center / 240px 24px;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='24' viewBox='0 0 240 24'%3E%3Cpath d='M0 13 L12 12 L20 14 L31 11 L41 13 L53 10 L64 12 L75 10 L87 13 L99 11 L111 13 L123 10 L134 12 L146 9 L158 12 L170 10 L182 13 L194 11 L205 13 L216 10 L228 12 L240 13' fill='none' stroke='black' stroke-width='1.2'/%3E%3C/svg%3E")
+    repeat-x center / 240px 24px;
+}
+
+@media (max-width: 700px) {
+  .hero,
+  .section {
+    min-height: calc(100svh - 152px);
+    padding-block: 48px;
+  }
+}
