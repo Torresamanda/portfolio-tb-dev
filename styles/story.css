@@ -17,21 +17,6 @@
 .chapter-heading h2 {
   margin-top: 8px;
 }
-.chapter-tab {
-  position: absolute;
-  top: 0;
-  right: 32px;
-  display: grid;
-  place-items: start center;
-  width: 32px;
-  height: 64px;
-  padding-top: 8px;
-  color: var(--button-text);
-  background: var(--accent);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
-  font-size: 12px;
-  font-weight: 700;
-}
 .project-card {
   position: relative;
   box-shadow: 0 8px 24px rgb(35 19 40 / 0.05);
@@ -115,15 +100,48 @@
   margin-top: 8px;
   font-size: 14px;
 }
-.about-page-number {
-  display: block;
-  margin-top: 32px;
-  color: var(--muted);
-  font-size: 12px;
-  letter-spacing: 0.1em;
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
 }
-.about-story .about-page-number {
-  text-align: right;
+.education-card {
+  position: relative;
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 12px 32px rgb(35 19 40 / 0.06);
+}
+.education-bookmark {
+  position: absolute;
+  top: 0;
+  right: 24px;
+  width: 32px;
+  height: 56px;
+  padding-top: 8px;
+  text-align: center;
+  color: var(--button-text);
+  background: var(--accent);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
+}
+.education-period {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  padding-right: 40px;
+}
+.education-card h3 {
+  margin-top: 16px;
+  font-size: 24px;
+}
+.education-course {
+  margin-top: 8px;
+  color: var(--muted);
+}
+.footer-copyright {
+  align-self: center;
+  text-align: center;
 }
 .about-bookmark {
   position: absolute;
@@ -198,14 +216,21 @@
   .chapter-heading {
     padding: 24px 56px 24px 16px;
   }
-  .chapter-tab {
-    right: 16px;
-  }
   .timeline-paper {
     padding: 24px 16px;
   }
   .about {
     grid-template-columns: 1fr;
+  }
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+  .education-card {
+    padding: 24px;
+  }
+  .footer-copyright {
+    align-self: flex-start;
+    text-align: left;
   }
   .about-opening,
   .about-story {

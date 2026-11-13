@@ -23,7 +23,7 @@
     width: 100%;
     justify-content: space-between;
     gap: 8px;
-    font-size: 13px;
+    font-size: clamp(11px, 3vw, 13px);
   }
   .hero {
     grid-template-columns: 1fr;

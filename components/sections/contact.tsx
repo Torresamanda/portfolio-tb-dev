@@ -5,7 +5,6 @@ export function Contact() {
         <span className="contact-stamp" aria-hidden="true">
           ✳
         </span>
-        <span className="section-number">04 / CONTATO</span>
         <h2>
           Vamos conversar<span className="brand-dot">?</span>
         </h2>

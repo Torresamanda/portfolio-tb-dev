@@ -1,4 +1,18 @@
 export const skills = ['React', 'Next.js', 'Node.js', 'TypeScript', 'Prototipação', 'UI e UX'];
+export const education = [
+  {
+    institution: 'Descomplica Faculdade Digital',
+    course: 'Pós-graduação Lato Sensu em Desenvolvimento Full Stack',
+    period: 'mai. 2024 — fev. 2025',
+    skills: ['Docker', 'AWS'],
+  },
+  {
+    institution: 'UNIASSELVI',
+    course: 'Ensino Técnico · Computer Systems Analysis',
+    period: 'mai. 2021 — dez. 2023',
+    skills: ['Trabalho em equipe', 'Desenvolvimento web'],
+  },
+];
 export type Project = {
   name: string;
   description: string;

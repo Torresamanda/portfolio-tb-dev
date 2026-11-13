@@ -4,14 +4,10 @@ export function Experience() {
   return (
     <section id="trajetoria" className="section container">
       <div className="section-heading chapter-heading">
-        <span className="section-number">02 / TRAJETÓRIA</span>
         <h2>
           Uma história em construção<span className="brand-dot">.</span>
         </h2>
         <p>Um pouco do caminho que venho percorrendo em tecnologia.</p>
-        <span className="chapter-tab" aria-hidden="true">
-          02
-        </span>
       </div>
       <div className="timeline-paper">
         <span className="timeline-paper-label" aria-hidden="true">

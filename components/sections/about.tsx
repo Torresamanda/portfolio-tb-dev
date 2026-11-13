@@ -5,7 +5,6 @@ export function About() {
     <section id="sobre" className="section container">
       <div className="about">
         <div className="about-opening">
-          <span className="section-number">03 / SOBRE MIM</span>
           <h2>
             Além do código<span className="brand-dot">.</span>
           </h2>
@@ -14,9 +13,6 @@ export function About() {
             <span className="about-note-label">anotações de trabalho</span>
             <p>Curiosidade para entender. Cuidado para criar. Troca para evoluir.</p>
           </div>
-          <span className="about-page-number" aria-hidden="true">
-            — 01
-          </span>
         </div>
         <div className="about-story">
           <span className="about-bookmark" aria-hidden="true">
@@ -32,24 +28,21 @@ export function About() {
           </p>
           <div className="about-principles">
             <div>
-              <strong>01. Pensar</strong>
+              <strong>Pensar</strong>
               <span>Prototipação e experiência de uso</span>
             </div>
             <div>
-              <strong>02. Construir</strong>
+              <strong>Construir</strong>
               <span>Interfaces e aplicações web</span>
             </div>
             <div>
-              <strong>03. Compartilhar</strong>
+              <strong>Compartilhar</strong>
               <span>Colaboração e mentoria</span>
             </div>
           </div>
           <Tags
             items={['Front-end', 'Back-end', 'Cloud', 'Mentoria', 'Prototipação', 'UI', 'UX']}
           />
-          <span className="about-page-number" aria-hidden="true">
-            02 —
-          </span>
         </div>
       </div>
     </section>

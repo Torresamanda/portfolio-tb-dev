@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section id="inicio" className="container hero">
       <div className="hero-copy">
-        <span className="chapter-kicker">portfólio / capítulo de abertura</span>
+        <span className="chapter-kicker">capítulo de abertura</span>
         <span className="eyebrow">Desenvolvedora Full Stack</span>
         <h1>
           Amanda Torres<span className="brand-dot">.</span>

@@ -7,7 +7,6 @@ export async function Projects() {
   return (
     <section id="projetos" className="section container">
       <div className="section-heading chapter-heading">
-        <span className="section-number">01 / PROJETOS</span>
         <h2>
           Projetos em destaque<span className="brand-dot">.</span>
         </h2>
@@ -20,9 +19,6 @@ export async function Projects() {
           Minha trajetória com plataformas internas, arquitetura e prototipação inspira a forma como
           penso cada solução.
         </p>
-        <span className="chapter-tab" aria-hidden="true">
-          01
-        </span>
       </div>
       {usedFallback && (
         <div className="project-notice" role="status">
