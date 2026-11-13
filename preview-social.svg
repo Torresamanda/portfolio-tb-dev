@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fcfafb"/>
+  <rect x="38" y="38" width="1124" height="554" rx="24" fill="#fff" stroke="#e5d8e8" stroke-width="2"/>
+  <rect x="88" y="100" width="365" height="42" rx="21" fill="#f1e0f5"/>
+  <text x="108" y="127" fill="#702d89" font-family="Arial,sans-serif" font-size="17" font-weight="bold" letter-spacing="2">DESENVOLVEDORA FULL STACK</text>
+  <text x="88" y="264" fill="#191332" font-family="Georgia,serif" font-size="76" font-weight="bold">Amanda Torres<tspan fill="#702d89">.</tspan></text>
+  <text x="90" y="335" fill="#702d89" font-family="Georgia,serif" font-size="37" font-style="italic">Ideias que ganham vida.</text>
+  <text x="90" y="418" fill="#605970" font-family="Arial,sans-serif" font-size="22">Tecnologia, criatividade e experiências digitais.</text>
+  <text x="90" y="522" fill="#702d89" font-family="Arial,sans-serif" font-size="19">amanda-torres-portfolio.pages.dev</text>
+  <circle cx="1000" cy="190" r="92" fill="#f1e0f5"/>
+  <path d="M1000 157 C1006 176 1014 184 1033 190 C1014 196 1006 204 1000 223 C994 204 986 196 967 190 C986 184 994 176 1000 157Z" fill="#702d89"/>
+</svg>
